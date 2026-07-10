@@ -569,3 +569,369 @@ const Str3=42+ +"1";
 console.log(`${Str1}:${typeof Str1}`);
 console.log(`${Str_1}:${typeof Str_1}`);
 console.log(`${Str3}:${typeof Str3}`);
+
+// Complex Data Types
+
+// Object
+
+let  testObj  =  {};
+console.log(typeof  testObj);  //  ->  object
+
+let testObj1={
+    nr:600,
+    str:"Txt"
+};
+
+console.log(testObj1.nr); // -> 600
+console.log(testObj1.str); // ->Txt
+
+let name_1="Calavin";
+let surname_1="Hart";
+let age_1=66;
+let email_1="CalvinMHart@teleworm.us";
+
+let name_2="Mateus";
+let surname_2="Pinto";
+let age_2=21;
+let email_2="MateusPinto@daryrep.com";
+
+let user1=
+{
+    name:"Calavin",
+    surname:"Hart",
+    age:66,
+    email:"CalMHart@teleworm.us"
+};
+
+let user2=
+{
+    name:"Mateus",
+    surname:"Pinto",
+    age:66,
+    email:"MateusPinto@daryrep.com"
+}
+
+console.log(user1.name); // -> Calvin
+console.log(user2.name); // -> Martus
+
+console.log(user1.age); // -> 66
+user1.age=67;
+console.log(user1.age); // -> 67
+
+console.log(user2.phone); // -> undefined
+user2.phone="904-399-7557";
+console.log(user2.phone); // -> 904-399-7557
+
+delete user2.phone;
+console.log(user2.phone); // -> undefined
+
+// Arrays
+
+let  days  =  ["Sun",  "Mon",  "Tue",  "Wed",  "Thu",  "Fri",  "Sat"];
+console.log(days[0]);  //  ->  Sun
+console.log(days[2]);  //  ->  Tue
+console.log(days[5]);  //  ->  Fri
+   
+days[0]  =  "Sunday";
+console.log(days[0]);  //  ->  Sunday
+   
+let  emptyArray  =  [];
+console.log(emptyArray[0]);  //  ->  undefined
+
+let  animals  =  [];
+console.log(animals[0]);  //  ->  undefined
+   
+animals[0]  =  "dog";
+animals[2]  =  "cat";
+   
+console.log(animals[0]);  //  ->  dog
+console.log(animals[1]);  //  ->  undefined
+console.log(animals[2]);  //  ->  cat
+
+let  values  =  ["Test",  7,  12.3,  false];
+
+let  names  =  [["Olivia",  "Emma",  "Mia",  "Sofia"],  ["William",  "James",  "Daniel"]];
+console.log(names[0]);  //  ->  ["Olivia",  "Emma",  "Mia",  "Sofia"]
+console.log(names[0][1]);  //  ->  Emma
+console.log(names[1][1]);  //  ->  James
+   
+let  femaleNames  =  names[0];
+console.log(femaleNames[0]);  //  ->  Olivia
+console.log(femaleNames[2]);  //  ->  Mia
+
+let  users  =[  
+         {
+                 name:  "Calvin",
+                 surname:  "Hart",
+                 age:  66,
+                 email:  "CalvinMHart@teleworm.us"
+         },
+         {
+                 name:  "Mateus",
+                 surname:  "Pinto",
+                 age:  21,
+                 email:  "MateusPinto@dayrep.com"
+         }
+];
+   
+console.log(users[0].name);  //  ->  Calvin
+console.log(users[1].age);  //  ->  21
+
+users[2]  =  {
+         name:  "Irene",
+         surname:  "Purnell",
+         age:  32,
+         email:  "IreneHPurnell@rhyta.com"
+   
+}
+   
+console.log(users[0].name);  //  ->  Calvin
+console.log(users[1].name);  //  ->  Mateus
+console.log(users[2].name);  //  ->  Irene
+
+let  days_1  =  ["Sun",  "Mon",  "Tue",  "Wed",  "Thu",  "Fri",  "Sat"];
+console.log(typeof  days_1);  //  ->  object
+
+let  days1  =  ["Sun",  "Mon",  "Tue",  "Wed",  "Thu",  "Fri",  "Sat"];
+let  day  =  "Sunday";
+   
+console.log(typeof  days1);  //  ->  object
+console.log(typeof  day);  //  ->  string
+   
+console.log(days1  instanceof  Array);  //  ->  true
+console.log(day  instanceof  Array);  //  ->  false
+
+// Methos in Array
+
+// Length
+let  Names    =  ["Olivia",  "Emma",  "Mateo",  "Samuel"];
+console.log(Names.length);  //  ->  4
+   
+Names[5]  =  "Amelia";
+console.log(Names.length);  //  ->  6
+   
+console.log(Names);  //  ->  ["Olivia",  "Emma",  "Mateo",  "Samuel",  undefined,  "Amelia"]
+console.log(Names[3]);  //  ->  Samuel
+console.log(Names[4]);  //  ->  undefined
+console.log(Names[5]);  //  ->  Amelia
+
+//IndexOf
+console.log(Names.indexOf("Mateo"));  //  ->  2
+console.log(Names.indexOf("Victor"));  //  ->  -1
+
+// Push
+let  names1  =  ["Olivia",  "Emma",  "Mateo",  "Samuel"];
+console.log(names1.length);  //  ->  4
+   
+names1.push("Amelia");
+console.log(names1.length);  //  ->  5
+console.log(names1);  //  -  >  ["Olivia",  "Emma",  "Mateo",  "Samuel",  "Amelia"]
+
+// Unshift
+console.log(names1.unshift("Arpit"));
+console.log(names1.length);
+console.log(names1.indexOf("Arpit"));
+
+//Pop
+ names=  ["Olivia",  "Emma",  "Mateo",  "Samuel"];
+console.log(names.length);  //  ->  4
+   
+name  =  names.pop();
+console.log(names.length);  //  ->  3
+console.log(name);  //  ->  Samuel
+console.log(names);  //  ->  ["Olivia",  "Emma",  "Mateo"]
+
+// Shift
+names  =  ["Olivia",  "Emma",  "Mateo",  "Samuel"];
+console.log(names.length);  //  ->  4
+   
+name  =  names.shift();
+console.log(names.length);  //  ->  3
+console.log(name);  //  ->  Olivia
+console.log(names);  //  ->  ["Emma",  "Mateo",  "Samuel"]
+
+// Reverse
+ names  =  ["Olivia",  "Emma",  "Mateo",  "Samuel"];
+   
+names.reverse();
+console.log(names);  //  ->  ["Samuel",  "Mateo",  "Emma","Olivia"]
+
+names  =  ["Olivia",  "Emma",  "Mateo",  "Samuel"];
+   
+n1  =  names.slice(2);
+console.log(n1);  //  ->  ["Mateo",  "Samuel"]
+   
+n2  =  names.slice(1,3);
+console.log(n2);  //  ->  ["Emma",  "Mateo"]
+   
+n3  =  names.slice(0,  -1);
+console.log(n3);  //  ->  ["Olivia",  "Emma",  "Mateo"]
+   
+n4  =  names.slice(-1);
+console.log(n4);  //  ->  ["Samuel"]
+   
+console.log(names);  //  ->  ["Olivia",  "Emma",  "Mateo", "Samuel"]
+
+// Concat
+names  =  ["Olivia",  "Emma",  "Mateo",  "Samuel"];
+let  otherNames  =  ["William",  "Jane"];
+let  allNames  =  names.concat(  otherNames);
+   
+console.log(names);  //  ->  ["Olivia",  "Emma",  "Mateo", "Samuel"]
+console.log(otherNames);  //  ->  ["William",  "Jane"]
+console.log(allNames);  //  ->  ["Olivia",  "Emma",  "Mateo","Samuel",  "William",  "Jane"]
+
+
+/*Question 1: Create an object that describes a train ticket and store it in the ticket variable. The object must have three fields:
+starting station (key name from, give the name of the nearest station in your area as a value);
+end station (key name to, give any other station within 100km as a value);
+the price of the ticket (key name price, give the amount you would like to pay for this ticket as a value).
+The object must be created using curly brackets, in which all created fields will be listed immediately. Then display the values of all fields of the ticket on the console.*/
+
+let trainticket={
+    from:"BHOPAL",
+    to:"Delhi",
+    price:"$200",
+}
+
+console.log(trainticket.from);
+console.log(trainticket.to);
+console.log(trainticket.price);
+
+//Question 2: Declare an empty object and save it to a person variable. Using dot notation, add the name and surname fields to the object by entering your data as values. Try to display the individual fields on the console.
+
+let variable={};
+variable.name="Arpit";
+variable.surname="Sahu";
+
+console.log(variable.name);
+console.log(variable.surname);
+
+/*Question 3: We are setting up our small library of books about JavaScript programming. We have three books and want to prepare a list of them. We will store three pieces information about each book: title, author, and number of pages:
+
+Speaking JavaScript, Axel Rauschmayer, 460;
+Programming JavaScript Applications, Eric Elliott, 254;
+Understanding ECMAScript 6, Nicholas C. Zakas, 352.
+Create an array of three objects representing the books. Each object must have the following properties: title, author, pages.*/
+
+let bookrecord=[
+    {
+        title:"Speaking Javascript",
+        author:"Axel Rauschmayer",
+        pages:460
+    },
+    {
+        title:"Programming JavaScript Applications",
+        author:"Eric Elliott",
+        pages:254
+    },
+    {
+        title:"ECMAScript 6",
+        author:"Nicholas C. Zakas",
+        pages:352
+    }
+];
+
+// Question 4: Add a new book to the collection: Learning JavaScript Design Patterns, by Addy Osmani, 254 pages. Use the appropriate method to do this, which will attach the book at the end of the array. Display the length of the array and, in turn, all the book names in the collection.
+
+bookrecord.push({
+    title:"Learning JavaScript Desing Patterns",
+    author:"Addy Osmani",
+    pages:254
+})
+
+console.log(bookrecord.length);
+console.log(bookrecord[0].title);
+console.log(bookrecord[1].title);
+console.log(bookrecord[2].title);
+console.log(bookrecord[3].title);
+
+//Question 5: Use the slice command to copy the last two books to the new array.
+
+let record=bookrecord.slice(-2);
+console.log(record);
+
+//Question 6: The first book from the collection is lost in unexplained circumstances. You have already accepted the loss, so remove it from the array. Which method will you use for this purpose? Display the length of the array and all the names of the books from the collection in turn.
+
+bookrecor=bookrecord.shift();
+console.log(bookrecord.length);
+console.log(bookrecord[0].title);
+console.log(bookrecord[1].title);
+console.log(bookrecord[2].title);
+
+let pages=bookrecord[0].pages+bookrecord[1].pages+bookrecord[2].pages;
+console.log(`Total pages:${pages}`);
+
+/*Do you remember the contact list you created while doing the task from the previous Lab? You have to admit that at first glance it looked quite strange. We had to use nine variables to store information about just three users. What's worse, adding each new user would require the creation of three more variables. This is neither convenient nor practical. Fortunately, since then we have learned something about arrays and objects, which will allow us to save our list in a slightly more convenient way. Using the same data as in the previous Lab, create the contact list as an array, each element of which will be an object describing a single user. So we should get a three-element array, and each object placed in it will contain three pieces of information (name, phone, and email).
+
+At the end of the list declared in this way, add a new contact using the appropriate array method. The new contact is: Maisie Haley / 0913 531 3030 / risus.Quisque@urna.ca.
+
+Display the first and last contact, again in the format: name / phone / email. Use the length property of the array to determine the index of the last element. Remember that the array elements are indexed starting at 0.*/
+
+let contactlist=[{
+name: "Maxwell Wright",
+phone: "(0191) 719 6495",
+email: "Curabitur.egestas.nunc@nonummyac.co.uk"
+}, {
+name: "Raja Villarreal",
+phone: "0866 398 2895",
+email: "posuere.vulputate@sed.com"
+}, {
+name: "Helen Richards",
+phone: "0800 1111",
+email: "libero@convallis.edu"
+}
+];
+
+contactlist.push({
+    name:"Maisie Haley",
+    phone:"0913 531 3030",
+    email:"risus.Quisque@urna",
+})
+
+let l=contactlist.length;
+console.log(`First contact: name:${contactlist[0].name}, phone:${contactlist[0].phone} ,email:${contactlist[0].email}`);
+console.log(`First contact: name:${contactlist[l-1].name}, phone:${contactlist[l-1].phone} ,email:${contactlist[l-1].email}`);
+
+
+// Comments
+
+// Single line comments
+
+//  This  is  a  single-line  comment
+let  x1 =  42;  //  This  is  also  a  single  line  comment,  although  the  part  before  the  double  slash  is  proper  code  and  will  be  executed
+//  This  line  and  the  next  one  will  be  ignored
+//  x1  =  8;
+console.log(x1);  //  ->  42
+
+// MutiLine Commrents
+
+/*
+         This  is  a  block
+         comment  and  it  can
+         span  multiple  lines
+   
+         So  this  code  won't  be  executed
+         console.log("Hello,  World!");
+*/
+   
+let  y1  /*  because  no  better  name  */  =  42;
+console.log(y1);
+
+//Task: There’s a code that is currently not working. Try to fix it using only comments. Try, if possible, to use the keyboard shortcuts in your editor for this purpose.
+
+"use  strict";  
+   
+const  prefix  =  "username_";  
+   
+let  userName  =  "Jack";  
+// const  userName  =  "Adam";  
+   
+let  prefixedUserName;  
+// const  prefixedUserName;  
+   
+userName  =  "John";  
+prefixedUserName  =  prefix  +  userName;  
+   
+console.log(prefixedUserName  /*+  prefixedUserName2*/);  
+// console.log(prefixedUserName2);
